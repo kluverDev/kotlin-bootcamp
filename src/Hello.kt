@@ -1,15 +1,22 @@
 fun main(args: Array<String>) {
-//    val only = "whatnot"
-//    val price = 12.25
-//    val taxRate = 0.08
-//    val output = "The amount $price after tax comes to $${price * (1 + taxRate)}"
-//    val disclaimer = "The amount is in US$, that's right in \$only"
-//    println(output)
-//    println(disclaimer)
+    val name = "eve"
+    //prefer to use raw string instead of escape string in kotlin
+    val raw = """The kid asked, "How's it going, $name?""""
+    //multiline string is a rw string that contains a line break
+    val mem = """Dear $name, a quick reminder about the
+party we have scheduled next Tuesday at
+the 'Low Ceremony Cafe' at Noon. | Please plan to..."""
 
-    val factor = 2
-    fun doubleIt(n: Int) = n * factor
-    val message = "The factor is $factor"
-    println(doubleIt(2))
-    println(message)
+    fun createMemoFor(name: String): String {
+        if (name == "Eve") {
+            val memo = """
+                |Dear $name, a quick reminder about the
+party we have scheduled next Tuesday at
+the 'Low Ceremony Cafe' at Noon. | Please plan to...
+                """
+            return memo.trimMargin()
+        }
+        return ""
+    }
+    println(createMemoFor("Eve"))
 }
