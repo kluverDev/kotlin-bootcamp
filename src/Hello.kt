@@ -1,16 +1,25 @@
 fun main(args: Array<String>) {
-   fun canVote(name: String, age: Int): String {
-//        var status: String
-//        if (age > 17) {
-//            status = "yes, please vote"
-//        } else {
-//            status = "nope, please come back"
-//        }
-//        return "$name, $status"
-       val status = if (age > 17) "yes, please vote" else "nope, please come back"
-       return "$name, $status"
-   }
-   println(canVote("Eve", 12))
-
+    fun max(numbers: IntArray): Int {
+        var large = Int.MIN_VALUE
+        println(large)
+        for (number in numbers) {
+            println("$number hell")
+            large = if (number > large) number else large
+            println(large)
+        }
+        return large
+    }
+    println(max(intArrayOf(1, 5, 2, 12, 7, 3)))
+//    //shortest func you can write in kotlin
+//    fun greet(): String {
+//        return "string"
+//    }
+//
+//    println(greet())
+    //    fun sayHello() = println("Well, hello") //kotlin infers the type as Unit.
+//    val message: String = sayHello() //ERROR
+//    fun sayHello(): Unit = println("Well, hello")
+//    val message: Unit = sayHello()
+//    println(message).toString()
 
 }
