@@ -1,16 +1,16 @@
 fun main(args: Array<String>) {
-     //destructuring
-     fun getFullName() = Triple("John", "Quincy", "Adams")
-    val result = getFullName()
-    /*val first = result.first
-    val middle = result.second
-    val last = result.third*/
-    val (first, middle, last) = getFullName()
-    /*
-    val (first, _, last) = getFullName()*/
-    //to get only the middle name
-//    val (_, middle) = getFullName()
-    println("$first $middle $last") //John Quincy Adams
-    //In addition to using destructuring when the return type is a data class, you can
-    //also use destructuring to extract key and value from Map entries
+     //RANGES
+  /*  val oneToFive: IntRange = 1..5
+    val aToE: CharRange = 'a'..'e'
+    val seekHelp: ClosedRange<String> = "hell".."help"
+    println(seekHelp.contains("helm")) //true
+    println(seekHelp.contains("helq")) //false
+    for (i in 1..5) { print("$i, ") }
+    for (i in 5.downTo(1)) { print("$i, ")
+//        for (i in 5 downTo 1) { print("$i, ")
+        for (i in 1 until 5) { print("$i, ") }
+        for (i in 1 until 10 step 3) { print("$i, ") }
+        for (i in (1..9).filter { it % 3 == 0 || it % 5 == 0 }) {
+            print("$i, ") //3, 5, 6, 9,
+        }*/
 }
