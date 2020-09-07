@@ -1,16 +1,17 @@
 fun main(args: Array<String>) {
-     //RANGES
-  /*  val oneToFive: IntRange = 1..5
-    val aToE: CharRange = 'a'..'e'
-    val seekHelp: ClosedRange<String> = "hell".."help"
-    println(seekHelp.contains("helm")) //true
-    println(seekHelp.contains("helq")) //false
-    for (i in 1..5) { print("$i, ") }
-    for (i in 5.downTo(1)) { print("$i, ")
-//        for (i in 5 downTo 1) { print("$i, ")
-        for (i in 1 until 5) { print("$i, ") }
-        for (i in 1 until 10 step 3) { print("$i, ") }
-        for (i in (1..9).filter { it % 3 == 0 || it % 5 == 0 }) {
-            print("$i, ") //3, 5, 6, 9,
-        }*/
+     //Iterating
+   /* val array = arrayOf(1, 2, 3)
+    for (e in array) { print("$e, ") }
+    val list = listOf(1, 2, 3)
+    for (e in list) { print("$e, ") }*/
+
+    //iterating over index and values
+    val names = listOf("Tom", "Jerry","GHANA", "Spike")
+   /* for (index in names.indices) {
+        println("Position of ${names.get(index)} is $index")
+    }*/
+   /* for (index in names.indices) println("Position of ${names[index]} is $index")*/
+
+    //we can also get index and position using withIndex() and destructuring
+    for ((index, name) in names.withIndex()) println("Position of $name is $index")
 }
